@@ -110,8 +110,12 @@ body {
     padding-top: 12px;
     padding-bottom: 12px;
     color: #fff;
-    background: color(var(--darkgrey) l(-5%)) no-repeat center center;
-    background-size: cover;
+    /*background: color(var(--darkgrey) l(-5%)) no-repeat center center;*/
+    /*background: linear-gradient(-180deg, #8A95FF 0%, #7073FE 100%);*/
+    background: #121212;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 240px;
 }
 
 .site-header:before {
@@ -123,7 +127,7 @@ body {
     left: 0;
     z-index: 10;
     display: block;
-    background: rgba(0,0,0,0.18);
+    /*background: rgba(0,0,0,0.18);*/
 }
 
 .site-header:after {
@@ -136,7 +140,7 @@ body {
     z-index: 10;
     display: block;
     height: 80px;
-    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));
+    /*background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0));*/
 }
 
 .site-header.no-cover:before,
@@ -151,7 +155,7 @@ body {
     align-items: center;
     padding: 10vw 4vw;
     min-height: 200px;
-    max-height: 450px;
+    max-height: 300px;
     text-align: center;
 }
 
@@ -164,7 +168,7 @@ body {
 }
 
 .site-logo {
-    max-height: 45px;
+    max-height: 250px;
 }
 
 .site-description {
@@ -474,6 +478,20 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 
 .post-card-meta {
     padding: 0 25px 25px;
+    display: table;
+    width: 100%;
+}
+
+.post-card-meta-image-wrap, .post-card-meta-info-wrap {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.post-card-author-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 .author-profile-image {
@@ -481,15 +499,13 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     width: 25px;
     height: 25px;
     border-radius: 100%;
-
     object-fit: cover;
 }
 
 .post-card-author {
-    font-size: 1.3rem;
+    color: #333;
+    font-size: 14px;
     font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
 }
 
 /* Special Styling for home page grid (below):
@@ -573,7 +589,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-full-header {
     margin: 0 auto;
-    padding: 6vw 3vw 3vw;
+    padding: 3vw 3vw 3vw;
     max-width: 1040px;
     text-align: center;
 }
@@ -594,14 +610,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-meta-date {
-    color: var(--blue);
+    color: var(--midgrey);
 }
 
 .post-full-title {
     margin: 0;
     font-family: "Mercury", Georgia, serif;
-    font-size: 42px;
-    line-height: 1.04;
+    font-size: 48px;
+    line-height: 58px;
     color: color(var(--darkgrey) l(-5%));
 }
 
@@ -611,11 +627,13 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-full-image {
-    margin: 0 0 -165px;
-    height: 800px;
-    background: var(--lightgrey) center center;
-    background-size: cover;
-    border-radius: 5px;
+    margin: 0 auto -100px;
+    height: 500px;
+    max-width: 800px;
+    background: white center center;;
+    background-size: contain;
+    background-size: no-repeat;
+    border-radius: 3px;
 }
 
 @media (max-width: 1170px) {
@@ -638,7 +656,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
     padding: 40px 40px 0;
     max-width: 760px;
     min-height: 230px;
-    font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: Georgia, serif;
+    /* font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; */
     font-size: 21px;
     line-height: 1.6em;
     letter-spacing: -.003em;
@@ -727,7 +746,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 
 .post-template .kg-card-markdown > p:first-child {
-    font-size: 1.25em;
+    font-size: 24px;
     line-height: 1.5em;
 }
 
@@ -803,9 +822,13 @@ Usage (In Ghost editor):
 }
 
 .post-full-content blockquote {
-    margin: 0 0 1.5em;
-    padding: 0 1.5em;
-    border-left: #3eb0ef 3px solid;
+    margin: 0 0 1em;
+    padding: 0 1em;
+    font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #8f8f8f;
+    border: 0;
+    font-size: 28px;
+    line-height: 42px;
 }
 
 .post-full-content blockquote p {
@@ -813,7 +836,8 @@ Usage (In Ghost editor):
     color: inherit;
     font-size: inherit;
     line-height: inherit;
-    font-style: italic;
+    font-style: normal;
+    font-weight: normal;
 }
 
 .post-full-content blockquote p:last-child {
@@ -1197,6 +1221,7 @@ Usage (In Ghost editor):
 }
 
 .author-card-name {
+    font-family: "Mercury", Georgia, sans-serif;
     margin: 0 0 2px 0;
     padding: 0;
     font-size: 2rem;
@@ -1214,6 +1239,7 @@ Usage (In Ghost editor):
 .author-card-content p {
     margin: 0;
     color: var(--midgrey);
+    font-size: 16px;
     line-height: 1.3em;
 }
 

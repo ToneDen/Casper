@@ -3,17 +3,10 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer {{#if @blog.cover_image}}" style="background-image: url({{@blog.cover_image}}){{else}}no-cover{{/if}}">
+<header class="site-header outer" style="background-image: url('https://files.slack.com/files-tmb/T0287N6EL-F8GN4EZL5-e0042ccd32/blog-cover-bg_720.png')">
     <div class="inner">
         <div class="site-header-content">
-            <h1 class="site-title">
-                {{#if @blog.logo}}
-                    <img class="site-logo" src="{{@blog.logo}}" alt="{{@blog.title}}" />
-                {{else}}
-                    {{@blog.title}}
-                {{/if}}
-            </h1>
-            <h2 class="site-description">{{@blog.description}}</h2>
+            <img class="site-logo" src="{{@blog.cover_image}}" alt="{{@blog.title}}" />
         </div>
         {{> "site-nav"}}
     </div>

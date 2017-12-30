@@ -19,6 +19,11 @@ into the {body} of the default.hbs template --}}
 
             <header class="post-full-header">
                 <section class="post-full-meta">
+                    {{#author}}
+                        <span class="post-full-meta-author">
+                            <a href="{{url}}">{{name}}</a>
+                        </span>
+                    {{/author}}
                     <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>

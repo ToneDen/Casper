@@ -3,7 +3,7 @@
 into the {body} of the default.hbs template --}}
 
 {{!-- The big featured header, it uses blog cover image as a BG if available --}}
-<header class="site-header outer" style="background-image: url('https://files.slack.com/files-tmb/T0287N6EL-F8GN4EZL5-e0042ccd32/blog-cover-bg_720.png')">
+<header class="site-header" style="background-image: url('https://files.slack.com/files-tmb/T0287N6EL-F8GN4EZL5-e0042ccd32/blog-cover-bg_720.png')">
     <div class="inner">
         <div class="site-header-content">
             <img class="site-logo" src="{{@blog.cover_image}}" alt="{{@blog.title}}" />
@@ -13,7 +13,7 @@ into the {body} of the default.hbs template --}}
 </header>
 
 {{!-- The main content area --}}
-<main id="site-main" class="site-main outer" role="main">
+<main id="site-main" class="site-main" role="main">
     <div class="inner">
 
         <div class="post-feed">

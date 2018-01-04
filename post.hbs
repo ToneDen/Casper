@@ -33,8 +33,9 @@ into the {body} of the default.hbs template --}}
             </header>
 
             {{#if feature_image}}
-            <figure class="post-full-image" style="background-image: url({{feature_image}})">
-            </figure>
+            <!-- <figure class="post-full-image" style="background-image: url({{feature_image}})">
+            </figure> -->
+            <img class="post-full-image" src={{feature_image}}></img>
             {{/if}}
 
             <section class="post-full-content">

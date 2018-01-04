@@ -604,7 +604,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 @media (max-width: 500px) {
     .post-full-header {
-        padding: 14vw 3vw 10vw;
+        padding: 14vw 3vw 6vw;
     }
 }
 
@@ -654,15 +654,16 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 @media (max-width: 1170px) {
     .post-full-image {
-        margin: 0 0 -100px;
-        height: 600px;
+        margin: 0 auto;
+        max-width: 670px;
         border-radius: 0;
     }
 }
 
 @media (max-width: 800px) {
     .post-full-image {
-        height: 400px;
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -675,7 +676,7 @@ The first (most recent) post in the list is styled to be bigger than the others 
     font-family: Georgia, serif;
     font-family: "Gotham", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size: 21px;
-    line-height: 1.6em;
+    line-height: 33px;
     letter-spacing: -.003em;
     border-radius: 3px;
     background: #fff;
@@ -688,7 +689,8 @@ The first (most recent) post in the list is styled to be bigger than the others 
 }
 @media (max-width: 800px) {
     .post-full-content {
-        font-size: 1.9rem;
+        font-size: 16px;
+        line-height: 28px;
     }
 }
 
@@ -763,7 +765,14 @@ The first (most recent) post in the list is styled to be bigger than the others 
 
 .post-template .kg-card-markdown > p:first-child {
     font-size: 24px;
-    line-height: 1.5em;
+    line-height: 36px;
+}
+
+@media (max-width: 800px) {
+    .post-template .kg-card-markdown > p:first-child {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 
 .post-full-content a {
@@ -793,16 +802,16 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content img,
 .post-full-content video {
     display: block;
-    margin: 1.5em auto;
+    margin: 10px auto;
     max-width: 760px;
 }
+
 @media (max-width: 1040px) {
     .post-full-content img,
     .post-full-content video {
         width: 100%;
     }
 }
-
 
 /* Full bleed images (#full)
 Super neat trick courtesy of @JoelDrapper
@@ -850,6 +859,13 @@ Usage (In Ghost editor):
     border: 0;
     font-size: 28px;
     line-height: 48px;
+}
+
+@media (max-width: 800px) {
+    .post-full-content blockquote {
+        font-size: 18px;
+        line-height: 30px;
+    }
 }
 
 .post-full-content blockquote p {
@@ -1038,10 +1054,12 @@ Usage (In Ghost editor):
     }
     .post-full-title {
         font-size: 2.9rem;
+        line-height: normal;
     }
     .post-full-image {
         margin-bottom: 4vw;
-        height: 350px;
+        max-width: 100%;
+        height: auto;
     }
     .post-full-content {
         padding: 0;
@@ -1229,6 +1247,12 @@ Usage (In Ghost editor):
     margin: 0 auto;
     padding: 3vw 40px 6vw;
     max-width: 760px;
+}
+
+@media (max-width: 800px) {
+    .post-full-footer {
+        padding: 3vw 10px 6vw;
+    }
 }
 
 .author-card {
@@ -1986,5 +2010,38 @@ Usage (In Ghost editor):
     }
     .site-footer-nav a:first-child {
         margin-left: 0;
+    }
+}
+
+/* Custom stuff */
+
+.quote-inline {
+    display: table;
+    vertical-align: middle;
+    min-width: 900px;
+    padding: 40px 0;
+}
+
+.quote-inline-wrap, .quote-inline-image {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.quote-inline-image {
+    width: 45%;
+}
+
+.quote-inline-image img {
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .quote-inline {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .quote-inline-image {
+        display: none;
     }
 }

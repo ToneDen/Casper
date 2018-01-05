@@ -71,6 +71,7 @@ body {
 
 .outer .nav li a {
     color: #333;
+    font-weight: 500;
 }
 
 /* Centered content container blocks */
@@ -234,10 +235,8 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     flex-shrink: 0;
     display: block;
     margin-right: 24px;
-    padding: 11px 0;
     color: #333;
     font-size: 1.7rem;
-    line-height: 1em;
     font-weight: bold;
     letter-spacing: -0.5px;
 }
@@ -249,7 +248,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
 .site-nav-logo img {
     display: block;
     width: auto;
-    height: 21px;
+    height: 38px;
 }
 
 .nav {
@@ -272,12 +271,15 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     padding: 10px 12px;
     color: white;
     opacity: 0.8;
+    font-weight: 500;
     transition: all 0.2s ease-in-out;
 }
 
 .nav li a:hover {
     text-decoration: none;
     opacity: 1;
+    transform: translateY(-3px);
+    color: #00ccff;
 }
 
 .site-nav-right {
@@ -285,6 +287,18 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     display: flex;
     align-items: center;
     height: 40px;
+}
+
+.site-nav-right-link {
+    color: #777BF9;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.site-nav-right-link:hover {
+    text-decoration: none;
+    transform: translateY(-3px);
 }
 
 .social-links {
@@ -802,8 +816,9 @@ The first (most recent) post in the list is styled to be bigger than the others 
 .post-full-content img,
 .post-full-content video {
     display: block;
-    margin: 10px auto;
+    margin: 30px auto;
     max-width: 760px;
+    padding: 0 40px;
 }
 
 @media (max-width: 1040px) {
@@ -1955,8 +1970,8 @@ Usage (In Ghost editor):
 
 .site-footer {
     position: relative;
-    padding-top: 20px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     color: #fff;
     background: color(var(--darkgrey) l(-15%));
 }
@@ -1971,6 +1986,10 @@ Usage (In Ghost editor):
 }
 
 .site-footer-content a {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-weight: 500;
     color: rgba(255,255,255,0.7);
 }
 
@@ -1981,23 +2000,23 @@ Usage (In Ghost editor):
 
 .site-footer-nav {
     display: flex;
+    margin: 0 auto;
 }
 
 .site-footer-nav a {
     position: relative;
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .site-footer-nav a:before {
     content: "";
     position: absolute;
-    top: 11px;
-    left: -11px;
+    top: 10px;
+    left: -12px;
     display: block;
     width: 2px;
-    height: 2px;
-    background: #fff;
-    border-radius: 100%;
+    height: 12px;
+    background: #333;
 }
 
 .site-footer-nav a:first-of-type:before {
